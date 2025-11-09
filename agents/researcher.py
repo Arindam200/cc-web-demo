@@ -1,7 +1,7 @@
 """Researcher Agent - Fetches latest market data and news via Yfinance."""
 
 from agno.agent import Agent
-from agno.models.anthropic import Claude
+from agno.models.openai import OpenAIChat
 from tools.yfinance_tools import (
     get_stock_info,
     get_stock_news,
@@ -24,7 +24,7 @@ def create_researcher_agent() -> Agent:
     return Agent(
         name="Market Researcher",
         role="Fetch and gather latest market data, stock prices, news, and financial information",
-        model=Claude(id="claude-sonnet-4-5"),
+        model=OpenAIChat(id="gpt-4"),
         tools=[
             get_stock_info,
             get_stock_news,

@@ -1,7 +1,7 @@
 """Analyst Agent - Interprets market data and drafts insights."""
 
 from agno.agent import Agent
-from agno.models.anthropic import Claude
+from agno.models.openai import OpenAIChat
 
 
 def create_analyst_agent() -> Agent:
@@ -17,7 +17,7 @@ def create_analyst_agent() -> Agent:
     return Agent(
         name="Market Analyst",
         role="Interpret market data, identify trends, and draft analytical insights",
-        model=Claude(id="claude-sonnet-4-5"),
+        model=OpenAIChat(id="gpt-4"),
         instructions=[
             "You are an expert financial analyst with deep knowledge of market dynamics and investment strategies.",
             "Analyze the market data provided by the Researcher to identify key trends and patterns.",

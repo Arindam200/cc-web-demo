@@ -36,7 +36,7 @@ pip install -r requirements.txt
 3. Set up environment variables:
 ```bash
 cp .env.example .env
-# Edit .env and add your ANTHROPIC_API_KEY
+# Edit .env and add your OPENAI_API_KEY
 ```
 
 ## Usage
@@ -156,22 +156,19 @@ Each analysis generates a comprehensive report with:
 
 - **[Agno](https://docs.agno.com)** - Multi-agent framework for Python
 - **[Yfinance](https://pypi.org/project/yfinance/)** - Real-time financial data from Yahoo Finance
-- **[Anthropic Claude](https://www.anthropic.com/claude)** - Advanced AI model (Claude Sonnet 4.5)
+- **[OpenAI GPT-4](https://openai.com/)** - Advanced AI model for agent intelligence
 - **Python 3.8+** - Programming language
 
 ## Requirements
 
 - Python 3.8 or higher
-- Anthropic API key
+- OpenAI API key
 - Internet connection for real-time market data
 
 ## Environment Variables
 
 ```bash
 # Required
-ANTHROPIC_API_KEY=your_anthropic_api_key_here
-
-# Optional (if using OpenAI models)
 OPENAI_API_KEY=your_openai_api_key_here
 ```
 
@@ -205,4 +202,4 @@ For issues and questions:
 
 - Built with [Agno](https://docs.agno.com) framework
 - Market data powered by [Yahoo Finance](https://finance.yahoo.com)
-- AI models by [Anthropic](https://www.anthropic.com)
+- AI models by [OpenAI](https://openai.com)

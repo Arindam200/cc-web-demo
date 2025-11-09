@@ -1,7 +1,7 @@
 """Advisor Agent - Suggests portfolio moves and investment strategies."""
 
 from agno.agent import Agent
-from agno.models.anthropic import Claude
+from agno.models.openai import OpenAIChat
 
 
 def create_advisor_agent() -> Agent:
@@ -17,7 +17,7 @@ def create_advisor_agent() -> Agent:
     return Agent(
         name="Investment Advisor",
         role="Formulate investment recommendations and suggest specific portfolio actions",
-        model=Claude(id="claude-sonnet-4-5"),
+        model=OpenAIChat(id="gpt-4"),
         instructions=[
             "You are a seasoned investment advisor focused on providing actionable portfolio recommendations.",
             "Based on the research data and analytical insights, formulate specific investment recommendations.",
