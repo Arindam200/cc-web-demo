@@ -1,7 +1,7 @@
 """Reporter Agent - Compiles comprehensive investment report."""
 
 from agno.agent import Agent
-from agno.models.anthropic import Claude
+from agno.models.openai import OpenAIChat
 
 
 def create_reporter_agent() -> Agent:
@@ -17,7 +17,7 @@ def create_reporter_agent() -> Agent:
     return Agent(
         name="Investment Reporter",
         role="Compile comprehensive investment reports with market outlook, key assets, and recommendations",
-        model=Claude(id="claude-sonnet-4-5"),
+        model=OpenAIChat(id="gpt-4"),
         instructions=[
             "You are an expert financial reporter specializing in creating clear, comprehensive investment reports.",
             "Compile all information from the Researcher, Analyst, and Advisor into a well-structured report.",

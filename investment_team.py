@@ -18,7 +18,7 @@ Usage:
 import os
 from dotenv import load_dotenv
 from agno.agent import Agent
-from agno.models.anthropic import Claude
+from agno.models.openai import OpenAIChat
 from agno.team.team import Team
 from agents.researcher import create_researcher_agent
 from agents.analyst import create_analyst_agent
@@ -45,9 +45,9 @@ def create_investment_team() -> Team:
     # Create the team with coordinate mode for collaborative work
     investment_team = Team(
         name="AI Investment Analysis Team",
-        agents=[researcher, analyst, advisor, reporter],
+        members=[researcher, analyst, advisor, reporter],
         mode="coordinate",  # Agents work together in a coordinated fashion
-        model=Claude(id="claude-sonnet-4-5"),
+        model=OpenAIChat(id="gpt-4"),
         instructions=[
             "You are leading a team of investment professionals to provide comprehensive market analysis and recommendations.",
             "",
@@ -113,10 +113,10 @@ def main():
     import sys
 
     # Check for API key
-    if not os.getenv("ANTHROPIC_API_KEY"):
-        print("ERROR: ANTHROPIC_API_KEY not found in environment variables.")
+    if not os.getenv("OPENAI_API_KEY"):
+        print("ERROR: OPENAI_API_KEY not found in environment variables.")
         print("Please set your API key in a .env file or environment variable.")
-        print("Example: export ANTHROPIC_API_KEY='your-api-key-here'")
+        print("Example: export OPENAI_API_KEY='your-api-key-here'")
         sys.exit(1)
 
     # Get query from command line or use default

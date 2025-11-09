@@ -14,10 +14,10 @@ def run_example():
     """Run an example investment analysis."""
 
     # Check for API key
-    if not os.getenv("ANTHROPIC_API_KEY"):
-        print("⚠️  ERROR: ANTHROPIC_API_KEY not found!")
+    if not os.getenv("OPENAI_API_KEY"):
+        print("⚠️  ERROR: OPENAI_API_KEY not found!")
         print("Please create a .env file with your API key:")
-        print("  ANTHROPIC_API_KEY=your-api-key-here")
+        print("  OPENAI_API_KEY=your-api-key-here")
         return
 
     # Create the investment team
