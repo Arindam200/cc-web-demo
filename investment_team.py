@@ -46,8 +46,8 @@ def create_investment_team() -> Team:
     investment_team = Team(
         name="AI Investment Analysis Team",
         members=[researcher, analyst, advisor, reporter],
-        mode="coordinate",  # Agents work together in a coordinated fashion
-        model=OpenAIChat(id="gpt-4"),
+        # mode="coordinate",  # Agents work together in a coordinated fashion
+        model=OpenAIChat(id="gpt-4o-mini"),
         instructions=[
             "You are leading a team of investment professionals to provide comprehensive market analysis and recommendations.",
             "",
@@ -73,7 +73,7 @@ def create_investment_team() -> Team:
             "",
             "Coordinate the team to work efficiently and produce high-quality investment insights.",
         ],
-        show_tool_calls=True,
+        # tool_calls=True,
         markdown=True,
     )
 

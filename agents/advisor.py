@@ -36,6 +36,6 @@ def create_advisor_agent() -> Agent:
             "Clearly state any assumptions or caveats in your recommendations.",
             "Remember that past performance doesn't guarantee future results.",
         ],
-        add_datetime_to_instructions=True,
+        # add_datetime_to_instructions=True,
         markdown=True,
     )

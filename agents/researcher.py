@@ -41,7 +41,7 @@ def create_researcher_agent() -> Agent:
             "Organize your findings clearly with proper categorization (market overview, stock analysis, news summary).",
             "Include data timestamps and sources in your research.",
         ],
-        add_datetime_to_instructions=True,
-        show_tool_calls=True,
+        # add_datetime_to_instructions=True,
+        # tool_calls=True,
         markdown=True,
     )

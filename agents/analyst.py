@@ -30,6 +30,6 @@ def create_analyst_agent() -> Agent:
             "Use technical analysis concepts like support/resistance levels, momentum, and volatility when appropriate.",
             "Your analysis should be objective and balanced, presenting both bullish and bearish perspectives.",
         ],
-        add_datetime_to_instructions=True,
+        # add_datetime_to_instructions=True,
         markdown=True,
     )

@@ -55,6 +55,6 @@ def create_reporter_agent() -> Agent:
             "Ensure all data points include proper context and timestamps.",
             "The report should be comprehensive yet concise, focusing on actionable insights.",
         ],
-        add_datetime_to_instructions=True,
+        # add_datetime_to_instructions=True,
         markdown=True,
     )
